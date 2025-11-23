@@ -20,6 +20,7 @@ import quote from "./images/teacher/quote.svg";
 import gallery_1 from "./images/gallery/img-1 (2).png";
 import gallery_2 from "./images/gallery/img-2 (3).png";
 import gallery_3 from "./images/gallery/img-3 (2).png";
+import mission from "./images/about-mission-img.png";
 export {
   Logo,
   BannerImage_0,
@@ -43,4 +44,5 @@ export {
   gallery_1,
   gallery_2,
   gallery_3,
+  mission,
 };
