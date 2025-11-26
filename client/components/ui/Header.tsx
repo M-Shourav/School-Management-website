@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <Container className={"mt-5"}>
       <div className="bg-white rounded-md p-5 flex items-center justify-between">
-        <Link href={"/"} className="w-52 md:w-full">
+        <Link href={"/"} className="w-52 md:w-fit">
           <Image src={Logo} alt="logo" />
         </Link>
         <MobileNavigation />

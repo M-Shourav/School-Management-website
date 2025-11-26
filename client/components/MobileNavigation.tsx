@@ -32,10 +32,7 @@ const MobileNavigation = () => {
     <div>
       <Sheet>
         <SheetTrigger asChild>
-          <Menu
-            className="text-green-600 w-full h-full cursor-pointer -mt-2"
-            size={30}
-          />
+          <Menu className="text-green-600 cursor-pointer -mt-2" size={30} />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader className="bg-green-50">

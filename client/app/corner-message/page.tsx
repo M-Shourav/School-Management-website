@@ -33,7 +33,7 @@ const page = () => {
                   <h4 className="text-base font-semibold">মোঃ মোস্তফা কামাল</h4>
                 </div>
               </div>
-              <div className="max-w-2xl mx-auto mt-10 flex flex-col gap-y-5 p-6 text-sm font-medium leading-5">
+              <div className="max-w-2xl mx-auto mt-10 flex flex-col gap-y-5 p-2 md:p-6 text-sm font-medium leading-5">
                 <p>
                   প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন
                   শিক্ষক হিসেবে, একজন অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি
@@ -52,7 +52,7 @@ const page = () => {
             </div>
             <div className="w-full grid grid-cols-1 lg:grid-cols-2  border-t border-t-gray-200">
               <div className="w-full border-r border-r-gray-200">
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের লক্ষ্য ও উদ্দেশ্য সম্পর্কে
                   </h3>
@@ -67,7 +67,7 @@ const page = () => {
                     মেধা ও প্রতিভা বিকাশের সুযোগ করে দিচ্ছি।
                   </p>
                 </div>
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     শিক্ষার্থীদের জন্য প্রত্যাশা সম্পর্কে
                   </h3>
@@ -85,7 +85,7 @@ const page = () => {
                 </div>
               </div>
               <div className="w-full">
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের সাফল্য ও অর্জন সম্পর্কে
                   </h3>
@@ -100,7 +100,7 @@ const page = () => {
                     সৃজনশীল ও দক্ষ হিসেবে নিজেদেরকে প্রকাশ করতে সক্ষম হয়েছে।
                   </p>
                 </div>
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের ভবিষ্যৎ পরিকল্পনা সম্পর্কে
                   </h3>
@@ -139,7 +139,7 @@ const page = () => {
                   </h4>
                 </div>
               </div>
-              <div className="max-w-2xl mx-auto mt-10 flex flex-col gap-y-5 p-6 text-sm font-medium leading-5">
+              <div className="max-w-2xl mx-auto mt-10 flex flex-col gap-y-5 p-2 md:p-6 text-sm font-medium leading-5">
                 <p>
                   প্রিয় শিক্ষার্থীবৃন্দ, আজ আমি আপনাদের সামনে দাঁড়িয়েছি একজন
                   শিক্ষক হিসেবে, একজন অভিভাবক হিসেবে, এবং একজন বন্ধু হিসেবে। আমি
@@ -158,7 +158,7 @@ const page = () => {
             </div>
             <div className="w-full grid grid-cols-1 lg:grid-cols-2  border-t border-t-gray-200">
               <div className="w-full border-r border-r-gray-200">
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের লক্ষ্য ও উদ্দেশ্য সম্পর্কে
                   </h3>
@@ -173,7 +173,7 @@ const page = () => {
                     মেধা ও প্রতিভা বিকাশের সুযোগ করে দিচ্ছি।
                   </p>
                 </div>
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     শিক্ষার্থীদের জন্য প্রত্যাশা সম্পর্কে
                   </h3>
@@ -191,7 +191,7 @@ const page = () => {
                 </div>
               </div>
               <div className="w-full">
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের সাফল্য ও অর্জন সম্পর্কে
                   </h3>
@@ -206,7 +206,7 @@ const page = () => {
                     সৃজনশীল ও দক্ষ হিসেবে নিজেদেরকে প্রকাশ করতে সক্ষম হয়েছে।
                   </p>
                 </div>
-                <div className="py-6 px-6 flex flex-col gap-y-5">
+                <div className="py-2 md:py-6 px-2 md:px-6 flex flex-col gap-y-5">
                   <h3 className="text-xl font-semibold">
                     স্কুলের ভবিষ্যৎ পরিকল্পনা সম্পর্কে
                   </h3>
