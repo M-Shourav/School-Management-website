@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const studentSummarySchema = new mongoose.Schema(
   {
-    className: { type: String, trim: true, required: true },
+    className: { type: String, required: true, trim: true },
     section: { type: String, required: true },
     department: { type: String },
     male: { type: Number, default: 0 },

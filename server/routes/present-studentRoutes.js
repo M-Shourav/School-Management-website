@@ -12,3 +12,5 @@ presentStudent.post("/create-present-student", CreatePresentStudent);
 presentStudent.delete("/delete-present-student/:id", deletePresentStudent);
 presentStudent.put("/update-present-student/:id", updateData);
 presentStudent.get("/show-present-student", getAllPresentStudent);
+
+export default presentStudent;

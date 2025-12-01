@@ -12,18 +12,17 @@ const CreatePresentStudent = asyncHandler(async (req, res) => {
       religion,
       specialCategory,
     } = req.body;
-    if (
-      className ||
-      section ||
-      department ||
-      male ||
-      female ||
-      religion ||
-      specialCategory
-    ) {
+
+    if (!className) {
       return res.json({
         success: false,
-        message: "Please full fill required data.",
+        message: "Class Name is required",
+      });
+    }
+    if (!section) {
+      return res.json({
+        success: false,
+        message: "section is required",
       });
     }
 
@@ -52,7 +51,7 @@ const CreatePresentStudent = asyncHandler(async (req, res) => {
     await presentStudent.save();
 
     return res.json({
-      success: false,
+      success: true,
       message: "present student create successfully",
       presentStudent,
     });
@@ -77,7 +76,6 @@ const deletePresentStudent = asyncHandler(async (req, res) => {
     return res.json({
       success: true,
       message: "present student data delete successfully",
-      presentId,
     });
   } catch (error) {
     return res.json({
@@ -128,7 +126,7 @@ const getAllPresentStudent = asyncHandler(async (req, res) => {
       .select("-__v");
 
     return res.json({
-      success: false,
+      success: true,
       total,
       presentStudentList,
     });
