@@ -1,5 +1,4 @@
 import Mongoose from "mongoose";
-import slugify from "slugify";
 
 // bangla slug generator
 
