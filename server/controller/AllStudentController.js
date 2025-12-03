@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import AllStudentModel from "../models/AllStudentModels.js";
-import cloudinary from "../utils/cloudinary";
+import cloudinary from "../utils/cloudinary.js";
 
 const createStudent = asyncHandler(async (req, res) => {
   try {
@@ -117,4 +117,74 @@ const deleStudent = asyncHandler(async (req, res) => {
   }
 });
 
-export { createStudent, deleStudent };
+const updateStudent = asyncHandler(async (req, res) => {
+  try {
+    const studentId = await AllStudentModel.findById(req.params.id);
+    const { name, className, classRoll, year, section } = req.body;
+
+    if (!studentId) {
+      return res.status(500).json({
+        success: false,
+        message: "Student data not found!",
+      });
+    }
+
+    // update avatar if new file uploaded
+    if (req.file) {
+      if (studentId.avatar.public_id) {
+        await cloudinary.uploader.destroy(studentId.avatar.public_id);
+      }
+
+      // update avatar
+      const file = await cloudinary.uploader.upload(req.file.path, {
+        resource_type: "image",
+        folder: "student-image",
+      });
+
+      studentId.avatar = {
+        url: file?.secure_url,
+        public_id: file?.public_id,
+      };
+    }
+
+    if (name) studentId.name = name;
+    if (className) studentId.className = className;
+    if (classRoll) studentId.classRoll = classRoll;
+    if (year) studentId.year = year;
+    if (section) studentId.section = section;
+
+    await studentId.save();
+
+    return res.json({
+      success: true,
+      message: "student data update successfully",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error?.message || "Internal Server error",
+    });
+  }
+});
+
+const getAllStudentList = asyncHandler(async (req, res) => {
+  try {
+    const total = await AllStudentModel.countDocuments({});
+    const studentList = await AllStudentModel.find()
+      .sort({ createdAt: -1 })
+      .select("-_v");
+
+    return res.json({
+      success: true,
+      total,
+      studentList,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: error?.message || "Internal server error",
+    });
+  }
+});
+
+export { createStudent, deleStudent, updateStudent, getAllStudentList };

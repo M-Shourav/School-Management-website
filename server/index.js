@@ -8,6 +8,8 @@ import teacherRouter from "./routes/teacherRoutes.js";
 import committeeRouter from "./routes/committeeRoutes.js";
 import studentRoutes from "./routes/studentListRoutes.js";
 import presentStudent from "./routes/present-studentRoutes.js";
+import AllStudentRoutes from "./routes/allStudentRoutes.js";
+
 const app = express();
 dotenv.config();
 
@@ -41,6 +43,7 @@ app.use(process.env.TEACHER_ROUTES, teacherRouter);
 app.use(process.env.COMMITTEE_ROUTES, committeeRouter);
 app.use(process.env.STUDENT_ROUTES, studentRoutes);
 app.use(process.env.PRESENT_STUDENT, presentStudent);
+app.use(process.env.ALL_STUDENTS_ROUTES, AllStudentRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello Server");
