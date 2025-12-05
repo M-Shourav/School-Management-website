@@ -19,19 +19,23 @@ function banglaSlug(text) {
     .toLowerCase();
 }
 
-const StudentSchema = new mongoose.Schema(
+const gallerySchema = new mongoose.Schema(
   {
-    name: { type: String, required: true },
-    className: { type: String, required: true },
-    classRoll: { type: String, required: true },
-    year: { type: String, required: true },
-    section: { type: String, required: true },
-    avatar: {
+    title: { type: String, required: true },
+    coverImage: {
       type: {
         url: String,
         public_id: String,
       },
       required: true,
+    },
+    videoLink: {
+      type: String,
+      default: null,
+    },
+    type: {
+      type: String,
+      enum: ["image", "video", "mixed"],
     },
     slug: {
       type: String,
@@ -40,16 +44,18 @@ const StudentSchema = new mongoose.Schema(
       trim: true,
     },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
-// auto generate slug
-StudentSchema.pre("save", function (next) {
-  if (this.isModified("name")) {
-    this.slug = banglaSlug(this.name);
+gallerySchema.pre("save", function (next) {
+  if (this.isModified("title")) {
+    this.slug = banglaSlug(this.title);
   }
   next();
 });
 
-const AllStudentModel = mongoose.model("AllStudent", StudentSchema);
-export default AllStudentModel;
+const galleryModel = mongoose.model("gallery", gallerySchema);
+
+export default galleryModel;
